@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 row justify-content-center"></div>
+        <h3>Edit Diary</h3>
+        <form (ngSubmit)="submit()">
+            <input class="form-control" type="text" name="Name" [(ngModel)]="diary.name" placeholder="Diary Name">
+            <input class="form-control" type="text" name="Author" [(ngModel)]="diary.author"
+                placeholder="Diary Author">
+            <input class="form-control" type="text" name="Time" [(ngModel)]="diary.time" placeholder="Diary Time">
+            <input class="form-control" type="text" name="img" [(ngModel)]="diary.img" placeholder="Diary Image">
+
+            <textarea class="form-control" [(ngModel)]="diary.date" placeholder="Diary Date"
+                name="Date" cols="30" rows="5"></textarea>
+            <textarea class="form-control" [(ngModel)]="diary.content" placeholder="Diary Content" name="content"
+                cols="30" rows="5"></textarea>
+            <button class="btn btn-primary" type="submit">Update Diary</button>
+        </form>
+    </div>
+</div>

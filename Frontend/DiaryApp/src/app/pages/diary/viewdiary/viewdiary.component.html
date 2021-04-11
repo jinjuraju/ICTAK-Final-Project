@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 row justify-content-center">
+            <div class="col-12 row justify-content-center">
+                <div class="col-md-6 img-card" style="background-image: url({{diary.img}});">
+                </div>
+            </div>
+            <div class="col-12 row justify-content-center">
+                <a class="btn btn-primary"  *ngIf="userService.loggedIn()" routerLink="/edit/{{diary._id}}">Edit</a>
+                <button class="btn btn-danger"  *ngIf="userService.loggedIn()" (click)="delete(diary._id)">Delete</button>
+                <h1>{{diary.name}}</h1>
+                <h4>Author: {{diary.author}}</h4>
+                <h4>Time: {{diary.time}}</h4>
+                <h4>Date:
+                    <ul *ngFor="let date of dateArray">
+                        <li>{{date}}</li>
+                    </ul>
+                </h4>
+                <h4>Contents: {{diary.content}}</h4>
+
+            </div>
+        </div>
+    </div>
+</div>
